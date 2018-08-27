@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: slateblue;
+}
+.title{
+    text-align: center; 
+}
+.title h1{
+    margin-top: 50px;
+    font-family: 'Anton', sans-serif;
+}
+div img{
+    width:120px;
+    height:170px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border:3px solid white;
+    opacity: 1;
+}
+
+
+.game-area{
+    width: 950px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    background-color: rgb(122, 112, 144);
+    background-image: url('imgs/wood.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 740px;
+    border-radius: 25px;
+    perspective: 1000px;
+}
+.card-grid{
+    width: 850px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 60px;
+    height: 100px;
+}
+.card{
+    margin: auto;
+    width: 120px;
+    height: 170px;
+    background-image: url('imgs/card-back.jpg');
+    border: 3px solid white;
+    border-radius: 25px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+.card:active{
+    transform: scale(.97);
+    transition: .05s;
+}
+.card.flip{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.face{
+    opacity: 1;
+    transform: rotateY(180deg);
+    backface-visibility: visible;
+}
