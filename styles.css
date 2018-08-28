@@ -12,18 +12,11 @@
     margin-top: 50px;
     font-family: 'Anton', sans-serif;
 }
-div img{
-    width:120px;
-    height:170px;
-    border-radius: 25px;
-    box-sizing: border-box;
-    border:3px solid white;
-    opacity: 1;
-}
+
 
 
 .game-area{
-    width: 950px;
+    width: 1000px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 200px;
@@ -31,41 +24,54 @@ div img{
     background-image: url('imgs/wood.jpg');
     background-size: cover;
     background-position: center;
-    height: 740px;
+    height: 840px;
     border-radius: 25px;
     perspective: 1000px;
+    display: flex;
+    text-align: center;
 }
 .card-grid{
-    width: 850px;
-    margin: 0 auto;
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 60px;
-    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 720px;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 .card{
     margin: auto;
-    width: 120px;
-    height: 170px;
-    background-image: url('imgs/card-back.jpg');
-    border: 3px solid white;
-    border-radius: 25px;
-    transform: scale(1);
+    width: 24%;
+    height: 33%;
+    margin-top: 10px;
+    position: relative;
     transform-style: preserve-3d;
-    transition: .5s;
+    transition: .3s;
 }
 .card:active{
-    transform: scale(.97);
-    transition: .05s;
+    transform: scale(.98);
+    transition: transform .1s;
 }
 .card.flip{
     transform: rotateY(180deg);
-    backface-visibility: hidden;
 }
-.face{
-    opacity: 1;
+.cardbacks{
+    margin: auto;
+    width:85%;
+    height:100%;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border:3px solid white;
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+.cardfaces{
+    margin: auto;
+    width:85%;
+    height:100%;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border:3px solid white;
     transform: rotateY(180deg);
-    backface-visibility: visible;
+    
 }
